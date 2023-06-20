@@ -10,7 +10,7 @@ const io = new Server(server);
 
 const baud = 115200; // 9600 - Arduino UNO | 115200 Raspberry Pi Pico
 
-const port = new SerialPort({ path: 'COM8', baudRate: baud }, function (err) {
+const port = new SerialPort({ path: '/dev/ttyACM0', baudRate: baud }, function (err) {
     if (err) {
         return console.log('Error: ', err.message)
     }
